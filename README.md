@@ -23,7 +23,7 @@ Showcasing some of my devs. works under progress and enhanceable of course.
    - Predicts future trading behaviour
    - Personal portfolio optimization
 
-Statistics, sources & refs : 
+** Statistics, sources & refs : **
    - Total Code Volume: ~35,000 lines Python
    - Projects: 10+ quantitative systems (3 featured)
    - Documentation: Comprehensive READMEs with methodology explanations
@@ -32,7 +32,7 @@ Statistics, sources & refs :
 
 
 
-Other relevant projects not shown : 
+** Other relevant projects not shown : **
 
 4. **First_Prediction_Commodities** (Gold/Commodity ML)
    - Machine learning price prediction
@@ -62,10 +62,9 @@ Other relevant projects not shown :
    - Live trading connectivity
    - Market data streaming
   
-Disclaimer : All projects are personal research developed on personal time and equipment. Not affiliated with any current or former employer. Code is provided for educational and demonstration purposes. Not financial advice.
-Disclaimer 2 : AI was used in coding several features and API connections - mainly using a claude code terminal in an isolated VM, and codex for my main PC / reformating / re-adjusting given the verbose content of claude.
-
-
 10. **integrated_results**
     - Cross-system signal aggregation
     - Unified trading signal generation
+      
+** Disclaimer : ** All projects are personal research developed on personal time and equipment. Not affiliated with any current or former employer. Code is provided for educational and demonstration purposes. Not financial advice. 
+** Disclaimer 2 : ** AI was used in coding several features and API connections - mainly using a claude code terminal in an isolated VM, and codex for my main PC / reformating / re-adjusting given the verbose content of claude.
