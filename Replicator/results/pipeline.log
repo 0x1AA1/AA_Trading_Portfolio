@@ -1,0 +1,795 @@
+2025-10-04 22:29:13,285 - __main__ - INFO - Starting Trade Replicator Pipeline
+2025-10-04 22:29:13,324 - data_collectors.oecd_fetcher - INFO - Database initialized at F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\data\macro\oecd\oecd_cache.db
+2025-10-04 22:29:13,334 - data_collectors.market_data_fetcher - INFO - Market data database initialized at F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\data\macro\market_data.db
+2025-10-04 22:29:13,334 - __main__ - INFO - Trade Replicator initialized
+2025-10-04 22:29:13,334 - __main__ - INFO - Loading trade data from F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\Full_Transac_vAA.XLSX
+2025-10-04 22:29:13,514 - __main__ - INFO - Loaded 69 trades from 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+2025-10-04 22:29:13,514 - __main__ - INFO - Fetching macro-economic data...
+2025-10-04 22:29:13,522 - data_collectors.oecd_fetcher - INFO - Generated 1750 synthetic OECD data points
+2025-10-04 22:29:13,549 - data_collectors.market_data_fetcher - INFO - Fetching GC=F from yfinance
+2025-10-04 22:29:14,108 - data_collectors.market_data_fetcher - INFO - Cached 1449 market data records for GC=F
+2025-10-04 22:29:14,110 - data_collectors.market_data_fetcher - INFO - Fetching SI=F from yfinance
+2025-10-04 22:29:14,329 - data_collectors.market_data_fetcher - INFO - Cached 1449 market data records for SI=F
+2025-10-04 22:29:14,331 - data_collectors.market_data_fetcher - INFO - Fetching CL=F from yfinance
+2025-10-04 22:29:14,560 - data_collectors.market_data_fetcher - INFO - Cached 1449 market data records for CL=F
+2025-10-04 22:29:14,562 - data_collectors.market_data_fetcher - INFO - Fetching NG=F from yfinance
+2025-10-04 22:29:14,769 - data_collectors.market_data_fetcher - INFO - Cached 1450 market data records for NG=F
+2025-10-04 22:29:14,771 - data_collectors.market_data_fetcher - INFO - Fetching HG=F from yfinance
+2025-10-04 22:29:14,998 - data_collectors.market_data_fetcher - INFO - Cached 1450 market data records for HG=F
+2025-10-04 22:29:15,039 - data_collectors.market_data_fetcher - INFO - Fetching ^VIX from yfinance
+2025-10-04 22:29:15,246 - data_collectors.market_data_fetcher - INFO - Cached 1447 market data records for ^VIX
+2025-10-04 22:29:15,256 - data_collectors.market_data_fetcher - INFO - Generated 2104 Baltic Dry Index data points
+2025-10-04 22:29:15,260 - __main__ - INFO - Macro data shape: (70, 26)
+2025-10-04 22:29:15,260 - __main__ - INFO - Macro data columns: 26
+2025-10-04 22:29:15,260 - __main__ - INFO - Engineering features...
+2025-10-04 22:29:15,293 - __main__ - INFO - Engineered features shape: (9, 173)
+2025-10-04 22:29:15,293 - __main__ - INFO - Feature columns: 173
+2025-10-04 22:29:15,294 - __main__ - INFO - Analyzing correlations...
+2025-10-04 22:29:15,301 - __main__ - INFO - 
+Top correlations with trade count:
+2025-10-04 22:29:15,301 - __main__ - INFO -   GDP_CHN_lag1m: 0.932
+2025-10-04 22:29:15,302 - __main__ - INFO -   CLI_USA_lag1m: 0.897
+2025-10-04 22:29:15,302 - __main__ - INFO -   CLI_GBR_lag3m: 0.835
+2025-10-04 22:29:15,302 - __main__ - INFO -   CPI_FRA_lag6m: 0.821
+2025-10-04 22:29:15,302 - __main__ - INFO -   CPI_CHN_lag3m: 0.810
+2025-10-04 22:29:15,302 - __main__ - INFO -   INTEREST_RATE_FRA_lag6m: 0.791
+2025-10-04 22:29:15,302 - __main__ - INFO -   CPI_USA_lag3m: 0.788
+2025-10-04 22:29:15,302 - __main__ - INFO -   INTEREST_RATE_GBR_lag6m: 0.779
+2025-10-04 22:29:15,302 - __main__ - INFO -   GDP_USA_lag3m: 0.776
+2025-10-04 22:29:15,302 - __main__ - INFO -   INTEREST_RATE_USA_lag6m: 0.770
+2025-10-04 22:29:15,302 - __main__ - INFO -   INTEREST_RATE_DEU_lag6m: 0.768
+2025-10-04 22:29:15,302 - __main__ - INFO -   INTEREST_RATE_CHN_lag6m: 0.761
+2025-10-04 22:29:15,302 - __main__ - INFO -   CPI_CHN_lag6m: 0.757
+2025-10-04 22:29:15,302 - __main__ - INFO -   GDP_CHN: 0.753
+2025-10-04 22:29:15,302 - __main__ - INFO -   UNEM_CHN_lag6m: 0.748
+2025-10-04 22:29:15,972 - __main__ - INFO - Saved correlation heatmap to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\results\reports\correlation_heatmap_trade_count.png
+2025-10-04 22:29:15,973 - __main__ - INFO - Training ML models...
+2025-10-04 22:29:15,986 - __main__ - INFO - Training trade occurrence classifier...
+2025-10-04 22:29:15,986 - __main__ - ERROR - Pipeline failed: y contains 1 class after sample_weight trimmed classes with zero weights, while a minimum of 2 classes are required.
+Traceback (most recent call last):
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\main.py", line 663, in main
+    models = replicator.train_models()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\main.py", line 364, in train_models
+    clf_occurrence.fit(X_train_scaled, y_occ_train)
+  File "C:\AA\Utilities\Python\Lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\sklearn\ensemble\_gb.py", line 669, in fit
+    y = self._encode_y(y=y, sample_weight=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\sklearn\ensemble\_gb.py", line 1536, in _encode_y
+    raise ValueError(
+ValueError: y contains 1 class after sample_weight trimmed classes with zero weights, while a minimum of 2 classes are required.
+2025-10-04 22:29:59,958 - __main__ - INFO - Starting Trade Replicator Pipeline
+2025-10-04 22:29:59,961 - data_collectors.oecd_fetcher - INFO - Database initialized at F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\data\macro\oecd\oecd_cache.db
+2025-10-04 22:29:59,962 - data_collectors.market_data_fetcher - INFO - Market data database initialized at F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\data\macro\market_data.db
+2025-10-04 22:29:59,962 - __main__ - INFO - Trade Replicator initialized
+2025-10-04 22:29:59,962 - __main__ - INFO - Loading trade data from F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\Full_Transac_vAA.XLSX
+2025-10-04 22:30:00,120 - __main__ - INFO - Loaded 69 trades from 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+2025-10-04 22:30:00,121 - __main__ - INFO - Fetching macro-economic data...
+2025-10-04 22:30:00,127 - data_collectors.oecd_fetcher - INFO - Generated 1750 synthetic OECD data points
+2025-10-04 22:30:00,130 - __main__ - ERROR - Pipeline failed: UNIQUE constraint failed: oecd_data.indicator, oecd_data.country, oecd_data.date, oecd_data.frequency
+Traceback (most recent call last):
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\main.py", line 702, in main
+    macro_data = replicator.fetch_macro_data(start_date='2020-01-01')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\main.py", line 193, in fetch_macro_data
+    oecd_data = self.oecd_fetcher.generate_synthetic_data(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\src\data_collectors\oecd_fetcher.py", line 309, in generate_synthetic_data
+    df_cache.to_sql('oecd_data', conn, if_exists='append', index=False)
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\core\generic.py", line 3109, in to_sql
+    return sql.to_sql(
+           ^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\io\sql.py", line 844, in to_sql
+    return pandas_sql.to_sql(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\io\sql.py", line 2841, in to_sql
+    return table.insert(chunksize, method)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\io\sql.py", line 1121, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\io\sql.py", line 2537, in _execute_insert
+    conn.executemany(self.insert_statement(num_rows=1), data_list)
+sqlite3.IntegrityError: UNIQUE constraint failed: oecd_data.indicator, oecd_data.country, oecd_data.date, oecd_data.frequency
+2025-10-04 22:30:09,982 - __main__ - INFO - Starting Trade Replicator Pipeline
+2025-10-04 22:30:09,992 - data_collectors.oecd_fetcher - INFO - Database initialized at F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\data\macro\oecd\oecd_cache.db
+2025-10-04 22:30:10,002 - data_collectors.market_data_fetcher - INFO - Market data database initialized at F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\data\macro\market_data.db
+2025-10-04 22:30:10,002 - __main__ - INFO - Trade Replicator initialized
+2025-10-04 22:30:10,002 - __main__ - INFO - Loading trade data from F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\Full_Transac_vAA.XLSX
+2025-10-04 22:30:10,172 - __main__ - INFO - Loaded 69 trades from 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+2025-10-04 22:30:10,172 - __main__ - INFO - Fetching macro-economic data...
+2025-10-04 22:30:10,179 - data_collectors.oecd_fetcher - INFO - Generated 1750 synthetic OECD data points
+2025-10-04 22:30:10,205 - data_collectors.market_data_fetcher - INFO - Fetching GC=F from yfinance
+2025-10-04 22:30:10,743 - data_collectors.market_data_fetcher - INFO - Cached 1449 market data records for GC=F
+2025-10-04 22:30:10,745 - data_collectors.market_data_fetcher - INFO - Fetching SI=F from yfinance
+2025-10-04 22:30:10,866 - data_collectors.market_data_fetcher - INFO - Cached 1449 market data records for SI=F
+2025-10-04 22:30:10,868 - data_collectors.market_data_fetcher - INFO - Fetching CL=F from yfinance
+2025-10-04 22:30:10,994 - data_collectors.market_data_fetcher - INFO - Cached 1449 market data records for CL=F
+2025-10-04 22:30:10,996 - data_collectors.market_data_fetcher - INFO - Fetching NG=F from yfinance
+2025-10-04 22:30:11,114 - data_collectors.market_data_fetcher - INFO - Cached 1450 market data records for NG=F
+2025-10-04 22:30:11,116 - data_collectors.market_data_fetcher - INFO - Fetching HG=F from yfinance
+2025-10-04 22:30:11,273 - data_collectors.market_data_fetcher - INFO - Cached 1450 market data records for HG=F
+2025-10-04 22:30:11,277 - data_collectors.market_data_fetcher - INFO - Fetching ^VIX from yfinance
+2025-10-04 22:30:11,394 - data_collectors.market_data_fetcher - INFO - Cached 1447 market data records for ^VIX
+2025-10-04 22:30:11,398 - data_collectors.market_data_fetcher - INFO - Generated 2104 Baltic Dry Index data points
+2025-10-04 22:30:11,400 - __main__ - INFO - Macro data shape: (70, 26)
+2025-10-04 22:30:11,400 - __main__ - INFO - Macro data columns: 26
+2025-10-04 22:30:11,400 - __main__ - INFO - Engineering features...
+2025-10-04 22:30:11,428 - __main__ - INFO - Engineered features shape: (9, 173)
+2025-10-04 22:30:11,428 - __main__ - INFO - Feature columns: 173
+2025-10-04 22:30:11,428 - __main__ - INFO - Analyzing correlations...
+2025-10-04 22:30:11,434 - __main__ - INFO - 
+Top correlations with trade count:
+2025-10-04 22:30:11,434 - __main__ - INFO -   GDP_CHN_lag1m: 0.932
+2025-10-04 22:30:11,434 - __main__ - INFO -   CLI_USA_lag1m: 0.897
+2025-10-04 22:30:11,435 - __main__ - INFO -   CLI_GBR_lag3m: 0.835
+2025-10-04 22:30:11,435 - __main__ - INFO -   CPI_FRA_lag6m: 0.821
+2025-10-04 22:30:11,435 - __main__ - INFO -   CPI_CHN_lag3m: 0.810
+2025-10-04 22:30:11,435 - __main__ - INFO -   INTEREST_RATE_FRA_lag6m: 0.791
+2025-10-04 22:30:11,435 - __main__ - INFO -   CPI_USA_lag3m: 0.788
+2025-10-04 22:30:11,435 - __main__ - INFO -   INTEREST_RATE_GBR_lag6m: 0.779
+2025-10-04 22:30:11,435 - __main__ - INFO -   GDP_USA_lag3m: 0.776
+2025-10-04 22:30:11,435 - __main__ - INFO -   INTEREST_RATE_USA_lag6m: 0.770
+2025-10-04 22:30:11,435 - __main__ - INFO -   INTEREST_RATE_DEU_lag6m: 0.768
+2025-10-04 22:30:11,435 - __main__ - INFO -   INTEREST_RATE_CHN_lag6m: 0.761
+2025-10-04 22:30:11,435 - __main__ - INFO -   CPI_CHN_lag6m: 0.757
+2025-10-04 22:30:11,435 - __main__ - INFO -   GDP_CHN: 0.753
+2025-10-04 22:30:11,435 - __main__ - INFO -   UNEM_CHN_lag6m: 0.748
+2025-10-04 22:30:11,983 - __main__ - INFO - Saved correlation heatmap to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\results\reports\correlation_heatmap_trade_count.png
+2025-10-04 22:30:11,983 - __main__ - INFO - Training ML models...
+2025-10-04 22:30:11,994 - __main__ - INFO - Total samples: 9
+2025-10-04 22:30:11,994 - __main__ - INFO - Target class distribution: {1.0: 8, 0.0: 1}
+2025-10-04 22:30:11,998 - __main__ - INFO - Training trade occurrence classifier...
+2025-10-04 22:30:11,998 - __main__ - INFO - Unique classes in training data: 1
+2025-10-04 22:30:11,998 - __main__ - WARNING - Only one class in training data. Using simple baseline model.
+2025-10-04 22:30:12,000 - __main__ - INFO - Trade occurrence accuracy: 0.667
+2025-10-04 22:30:12,000 - __main__ - INFO - Training trade count regressor...
+2025-10-04 22:30:12,058 - __main__ - INFO - Trade count R2: -26.666
+2025-10-04 22:30:12,059 - __main__ - INFO - Training trade value regressor...
+2025-10-04 22:30:12,129 - __main__ - INFO - Trade value R2: -5.957
+2025-10-04 22:30:12,133 - __main__ - INFO - Saved occurrence_classifier to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\models\occurrence_classifier.pkl
+2025-10-04 22:30:12,137 - __main__ - INFO - Saved count_regressor to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\models\count_regressor.pkl
+2025-10-04 22:30:12,141 - __main__ - INFO - Saved value_regressor to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\models\value_regressor.pkl
+2025-10-04 22:30:12,142 - __main__ - INFO - Saved scaler to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\models\scaler.pkl
+2025-10-04 22:30:12,143 - __main__ - INFO - Generating next month predictions...
+2025-10-04 22:30:12,162 - __main__ - INFO - 
+Next Month Predictions:
+2025-10-04 22:30:12,162 - __main__ - INFO -   prediction_date: 2025-10-04
+2025-10-04 22:30:12,162 - __main__ - INFO -   target_month: 2025-11
+2025-10-04 22:30:12,162 - __main__ - INFO -   trade_will_occur: True
+2025-10-04 22:30:12,162 - __main__ - INFO -   probability_trade_occurs: 1.0
+2025-10-04 22:30:12,162 - __main__ - INFO -   probability_no_trade: 0.0
+2025-10-04 22:30:12,162 - __main__ - INFO -   predicted_trade_count: 5.65
+2025-10-04 22:30:12,162 - __main__ - INFO -   predicted_trade_value_eur: 4337.081849999994
+2025-10-04 22:30:12,162 - __main__ - INFO - Generating comprehensive report...
+2025-10-04 22:30:12,163 - __main__ - INFO - Generating next month predictions...
+2025-10-04 22:30:12,181 - __main__ - INFO - 
+Next Month Predictions:
+2025-10-04 22:30:12,181 - __main__ - INFO -   prediction_date: 2025-10-04
+2025-10-04 22:30:12,181 - __main__ - INFO -   target_month: 2025-11
+2025-10-04 22:30:12,181 - __main__ - INFO -   trade_will_occur: True
+2025-10-04 22:30:12,181 - __main__ - INFO -   probability_trade_occurs: 1.0
+2025-10-04 22:30:12,181 - __main__ - INFO -   probability_no_trade: 0.0
+2025-10-04 22:30:12,181 - __main__ - INFO -   predicted_trade_count: 5.65
+2025-10-04 22:30:12,181 - __main__ - INFO -   predicted_trade_value_eur: 4337.081849999994
+2025-10-04 22:30:12,182 - __main__ - INFO - 
+Report saved to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\results\reports\comprehensive_report_20251004.txt
+2025-10-04 22:30:12,182 - __main__ - INFO - 
+================================================================================
+TRADE REPLICATOR - COMPREHENSIVE ANALYSIS REPORT
+================================================================================
+Generated: 2025-10-04 22:30:12
+
+1. DATA INVENTORY
+--------------------------------------------------------------------------------
+Historical Trades: 69 trades
+Trade Date Range: 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+Macro Data Points: 70 months
+Macro Indicators: 26 features
+Engineered Features: 173 total features
+
+2. TRADE STATISTICS
+--------------------------------------------------------------------------------
+Total Trade Value: 70552.32 EUR
+Average Trade Size: 1022.50 EUR
+Median Trade Size: 345.00 EUR
+
+Trade Direction Distribution:
+  Long: 34 (49.3%)
+  Neutral: 34 (49.3%)
+  Unknown: 1 (1.4%)
+
+Strategy Distribution:
+  Momentum: 26
+  Mean Reversing: 16
+  Unknown: 14
+  Mean Reversing + momentum: 8
+  Heavy spike: 3
+
+3. MODEL PERFORMANCE
+--------------------------------------------------------------------------------
+Models trained on 70% of historical data
+Time-series cross-validation applied
+
+4. CORRELATION FINDINGS
+--------------------------------------------------------------------------------
+See detailed correlation matrix in: results/reports/macro_trade_correlations.csv
+
+5. NEXT MONTH PREDICTION
+--------------------------------------------------------------------------------
+Target Month: 2025-11
+Trade Will Occur: True
+Probability: 100.0%
+Predicted Trade Count: 5.7
+Predicted Trade Value: 4337.08 EUR
+
+================================================================================
+END OF REPORT
+================================================================================
+2025-10-04 22:30:12,182 - __main__ - INFO - 
+================================================================================
+2025-10-04 22:30:12,182 - __main__ - INFO - PIPELINE COMPLETED SUCCESSFULLY
+2025-10-04 22:30:12,182 - __main__ - INFO - ================================================================================
+2025-10-05 11:58:26,410 - __main__ - INFO - Starting Trade Replicator Pipeline
+2025-10-05 11:58:26,421 - data_collectors.oecd_fetcher - INFO - Database initialized at F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\data\macro\oecd\oecd_cache.db
+2025-10-05 11:58:26,426 - data_collectors.market_data_fetcher - INFO - Market data database initialized at F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\data\macro\market_data.db
+2025-10-05 11:58:26,426 - __main__ - INFO - Trade Replicator initialized
+2025-10-05 11:58:26,426 - __main__ - INFO - Loading trade data from F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\Full_Transac_vAA.XLSX
+2025-10-05 11:58:26,773 - __main__ - INFO - Loaded 69 trades from 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+2025-10-05 11:58:26,773 - __main__ - INFO - Fetching macro-economic data...
+2025-10-05 11:58:26,781 - data_collectors.oecd_fetcher - INFO - Generated 1750 synthetic OECD data points
+2025-10-05 11:58:26,784 - __main__ - ERROR - Pipeline failed: UNIQUE constraint failed: oecd_data.indicator, oecd_data.country, oecd_data.date, oecd_data.frequency
+Traceback (most recent call last):
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\main.py", line 702, in main
+    macro_data = replicator.fetch_macro_data(start_date='2020-01-01')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\main.py", line 193, in fetch_macro_data
+    oecd_data = self.oecd_fetcher.generate_synthetic_data(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\src\data_collectors\oecd_fetcher.py", line 309, in generate_synthetic_data
+    df_cache.to_sql('oecd_data', conn, if_exists='append', index=False)
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\core\generic.py", line 3109, in to_sql
+    return sql.to_sql(
+           ^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\io\sql.py", line 844, in to_sql
+    return pandas_sql.to_sql(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\io\sql.py", line 2841, in to_sql
+    return table.insert(chunksize, method)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\io\sql.py", line 1121, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\io\sql.py", line 2537, in _execute_insert
+    conn.executemany(self.insert_statement(num_rows=1), data_list)
+sqlite3.IntegrityError: UNIQUE constraint failed: oecd_data.indicator, oecd_data.country, oecd_data.date, oecd_data.frequency
+2025-10-05 11:58:51,287 - __main__ - INFO - Starting Trade Replicator Pipeline
+2025-10-05 11:58:51,323 - data_collectors.oecd_fetcher - INFO - Database initialized at F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\data\macro\oecd\oecd_cache.db
+2025-10-05 11:58:51,332 - data_collectors.market_data_fetcher - INFO - Market data database initialized at F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\data\macro\market_data.db
+2025-10-05 11:58:51,332 - __main__ - INFO - Trade Replicator initialized
+2025-10-05 11:58:51,332 - __main__ - INFO - Loading trade data from F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\Full_Transac_vAA.XLSX
+2025-10-05 11:58:51,498 - __main__ - INFO - Loaded 69 trades from 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+2025-10-05 11:58:51,498 - __main__ - INFO - Fetching macro-economic data...
+2025-10-05 11:58:51,505 - data_collectors.oecd_fetcher - INFO - Generated 1750 synthetic OECD data points
+2025-10-05 11:58:51,558 - data_collectors.market_data_fetcher - INFO - Fetching GC=F from yfinance
+2025-10-05 11:58:52,016 - data_collectors.market_data_fetcher - INFO - Cached 1449 market data records for GC=F
+2025-10-05 11:58:52,018 - data_collectors.market_data_fetcher - INFO - Fetching SI=F from yfinance
+2025-10-05 11:58:52,144 - data_collectors.market_data_fetcher - INFO - Cached 1449 market data records for SI=F
+2025-10-05 11:58:52,146 - data_collectors.market_data_fetcher - INFO - Fetching CL=F from yfinance
+2025-10-05 11:58:52,266 - data_collectors.market_data_fetcher - INFO - Cached 1449 market data records for CL=F
+2025-10-05 11:58:52,268 - data_collectors.market_data_fetcher - INFO - Fetching NG=F from yfinance
+2025-10-05 11:58:52,387 - data_collectors.market_data_fetcher - INFO - Cached 1450 market data records for NG=F
+2025-10-05 11:58:52,389 - data_collectors.market_data_fetcher - INFO - Fetching HG=F from yfinance
+2025-10-05 11:58:52,524 - data_collectors.market_data_fetcher - INFO - Cached 1450 market data records for HG=F
+2025-10-05 11:58:52,528 - data_collectors.market_data_fetcher - INFO - Fetching ^VIX from yfinance
+2025-10-05 11:58:52,648 - data_collectors.market_data_fetcher - INFO - Cached 1447 market data records for ^VIX
+2025-10-05 11:58:52,694 - data_collectors.market_data_fetcher - INFO - Generated 2105 Baltic Dry Index data points
+2025-10-05 11:58:52,697 - __main__ - INFO - Macro data shape: (70, 26)
+2025-10-05 11:58:52,697 - __main__ - INFO - Macro data columns: 26
+2025-10-05 11:58:52,697 - __main__ - INFO - Engineering features...
+2025-10-05 11:58:52,735 - __main__ - INFO - Engineered features shape: (9, 173)
+2025-10-05 11:58:52,735 - __main__ - INFO - Feature columns: 173
+2025-10-05 11:58:52,735 - __main__ - INFO - Analyzing correlations...
+2025-10-05 11:58:52,744 - __main__ - INFO - 
+Top correlations with trade count:
+2025-10-05 11:58:52,744 - __main__ - INFO -   GDP_CHN_lag1m: 0.932
+2025-10-05 11:58:52,744 - __main__ - INFO -   CLI_USA_lag1m: 0.897
+2025-10-05 11:58:52,744 - __main__ - INFO -   CLI_GBR_lag3m: 0.835
+2025-10-05 11:58:52,744 - __main__ - INFO -   CPI_FRA_lag6m: 0.821
+2025-10-05 11:58:52,744 - __main__ - INFO -   CPI_CHN_lag3m: 0.810
+2025-10-05 11:58:52,744 - __main__ - INFO -   INTEREST_RATE_FRA_lag6m: 0.791
+2025-10-05 11:58:52,744 - __main__ - INFO -   CPI_USA_lag3m: 0.788
+2025-10-05 11:58:52,745 - __main__ - INFO -   INTEREST_RATE_GBR_lag6m: 0.779
+2025-10-05 11:58:52,745 - __main__ - INFO -   GDP_USA_lag3m: 0.776
+2025-10-05 11:58:52,745 - __main__ - INFO -   INTEREST_RATE_USA_lag6m: 0.770
+2025-10-05 11:58:52,745 - __main__ - INFO -   INTEREST_RATE_DEU_lag6m: 0.768
+2025-10-05 11:58:52,745 - __main__ - INFO -   INTEREST_RATE_CHN_lag6m: 0.761
+2025-10-05 11:58:52,745 - __main__ - INFO -   CPI_CHN_lag6m: 0.757
+2025-10-05 11:58:52,745 - __main__ - INFO -   GDP_CHN: 0.753
+2025-10-05 11:58:52,745 - __main__ - INFO -   UNEM_CHN_lag6m: 0.748
+2025-10-05 11:58:54,442 - __main__ - INFO - Saved correlation heatmap to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\results\reports\correlation_heatmap_trade_count.png
+2025-10-05 11:58:54,442 - __main__ - INFO - Training ML models...
+2025-10-05 11:58:54,454 - __main__ - INFO - Total samples: 9
+2025-10-05 11:58:54,457 - __main__ - INFO - Target class distribution: {1.0: 8, 0.0: 1}
+2025-10-05 11:58:54,460 - __main__ - INFO - Training trade occurrence classifier...
+2025-10-05 11:58:54,461 - __main__ - INFO - Unique classes in training data: 1
+2025-10-05 11:58:54,461 - __main__ - WARNING - Only one class in training data. Using simple baseline model.
+2025-10-05 11:58:54,462 - __main__ - INFO - Trade occurrence accuracy: 0.667
+2025-10-05 11:58:54,463 - __main__ - INFO - Training trade count regressor...
+2025-10-05 11:58:54,529 - __main__ - INFO - Trade count R2: -26.666
+2025-10-05 11:58:54,529 - __main__ - INFO - Training trade value regressor...
+2025-10-05 11:58:54,595 - __main__ - INFO - Trade value R2: -5.957
+2025-10-05 11:58:54,598 - __main__ - INFO - Saved occurrence_classifier to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\models\occurrence_classifier.pkl
+2025-10-05 11:58:54,601 - __main__ - INFO - Saved count_regressor to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\models\count_regressor.pkl
+2025-10-05 11:58:54,605 - __main__ - INFO - Saved value_regressor to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\models\value_regressor.pkl
+2025-10-05 11:58:54,609 - __main__ - INFO - Saved scaler to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\models\scaler.pkl
+2025-10-05 11:58:54,609 - __main__ - INFO - Generating next month predictions...
+2025-10-05 11:58:54,626 - __main__ - INFO - 
+Next Month Predictions:
+2025-10-05 11:58:54,626 - __main__ - INFO -   prediction_date: 2025-10-05
+2025-10-05 11:58:54,626 - __main__ - INFO -   target_month: 2025-11
+2025-10-05 11:58:54,626 - __main__ - INFO -   trade_will_occur: True
+2025-10-05 11:58:54,626 - __main__ - INFO -   probability_trade_occurs: 1.0
+2025-10-05 11:58:54,626 - __main__ - INFO -   probability_no_trade: 0.0
+2025-10-05 11:58:54,626 - __main__ - INFO -   predicted_trade_count: 5.65
+2025-10-05 11:58:54,626 - __main__ - INFO -   predicted_trade_value_eur: 4337.081849999994
+2025-10-05 11:58:54,626 - __main__ - INFO - Generating comprehensive report...
+2025-10-05 11:58:54,627 - __main__ - INFO - Generating next month predictions...
+2025-10-05 11:58:54,645 - __main__ - INFO - 
+Next Month Predictions:
+2025-10-05 11:58:54,645 - __main__ - INFO -   prediction_date: 2025-10-05
+2025-10-05 11:58:54,645 - __main__ - INFO -   target_month: 2025-11
+2025-10-05 11:58:54,645 - __main__ - INFO -   trade_will_occur: True
+2025-10-05 11:58:54,645 - __main__ - INFO -   probability_trade_occurs: 1.0
+2025-10-05 11:58:54,645 - __main__ - INFO -   probability_no_trade: 0.0
+2025-10-05 11:58:54,645 - __main__ - INFO -   predicted_trade_count: 5.65
+2025-10-05 11:58:54,645 - __main__ - INFO -   predicted_trade_value_eur: 4337.081849999994
+2025-10-05 11:58:54,646 - __main__ - INFO - 
+Report saved to F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Algo_Trade_1\Replicator\results\reports\comprehensive_report_20251005.txt
+2025-10-05 11:58:54,646 - __main__ - INFO - 
+================================================================================
+TRADE REPLICATOR - COMPREHENSIVE ANALYSIS REPORT
+================================================================================
+Generated: 2025-10-05 11:58:54
+
+1. DATA INVENTORY
+--------------------------------------------------------------------------------
+Historical Trades: 69 trades
+Trade Date Range: 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+Macro Data Points: 70 months
+Macro Indicators: 26 features
+Engineered Features: 173 total features
+
+2. TRADE STATISTICS
+--------------------------------------------------------------------------------
+Total Trade Value: 70552.32 EUR
+Average Trade Size: 1022.50 EUR
+Median Trade Size: 345.00 EUR
+
+Trade Direction Distribution:
+  Long: 34 (49.3%)
+  Neutral: 34 (49.3%)
+  Unknown: 1 (1.4%)
+
+Strategy Distribution:
+  Momentum: 26
+  Mean Reversing: 16
+  Unknown: 14
+  Mean Reversing + momentum: 8
+  Heavy spike: 3
+
+3. MODEL PERFORMANCE
+--------------------------------------------------------------------------------
+Models trained on 70% of historical data
+Time-series cross-validation applied
+
+4. CORRELATION FINDINGS
+--------------------------------------------------------------------------------
+See detailed correlation matrix in: results/reports/macro_trade_correlations.csv
+
+5. NEXT MONTH PREDICTION
+--------------------------------------------------------------------------------
+Target Month: 2025-11
+Trade Will Occur: True
+Probability: 100.0%
+Predicted Trade Count: 5.7
+Predicted Trade Value: 4337.08 EUR
+
+================================================================================
+END OF REPORT
+================================================================================
+2025-10-05 11:58:54,646 - __main__ - INFO - 
+================================================================================
+2025-10-05 11:58:54,646 - __main__ - INFO - PIPELINE COMPLETED SUCCESSFULLY
+2025-10-05 11:58:54,646 - __main__ - INFO - ================================================================================
+2025-10-08 09:46:39,848 - __main__ - INFO - Starting Trade Replicator Pipeline
+2025-10-08 09:46:39,849 - __main__ - INFO - Initializing with UnifiedDataManager (FRED + World Bank + yfinance)
+2025-10-08 09:47:12,360 - __main__ - INFO - Starting Trade Replicator Pipeline
+2025-10-08 09:47:12,360 - __main__ - INFO - Initializing with UnifiedDataManager (FRED + World Bank + yfinance)
+2025-10-08 09:47:12,363 - unified_data_fetcher - WARNING - FRED API key not provided. Set FRED_API_KEY environment variable or pass api_key parameter.
+2025-10-08 09:47:12,363 - unified_data_fetcher - WARNING - Get free API key at: https://fred.stlouisfed.org/docs/api/api_key.html
+2025-10-08 09:47:12,364 - unified_data_fetcher - ERROR - wbgapi not installed. Install with: pip install wbgapi
+2025-10-08 09:47:12,364 - unified_data_fetcher - INFO - Enhanced Commodity Fetcher initialized
+2025-10-08 09:47:12,364 - unified_data_fetcher - INFO - Unified Data Manager initialized
+2025-10-08 09:47:12,364 - __main__ - INFO - Trade Replicator initialized
+2025-10-08 09:47:12,364 - __main__ - INFO - Loading trade data from F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\Full_Transac_vAA.XLSX
+2025-10-08 09:47:12,662 - __main__ - INFO - Loaded 69 trades from 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+2025-10-08 09:47:12,662 - __main__ - INFO - Fetching macro-economic data...
+2025-10-08 09:47:12,662 - __main__ - INFO - Fetching real economic data from FRED, World Bank, and yfinance...
+2025-10-08 09:47:12,662 - unified_data_fetcher - INFO - Building comprehensive macro dataset...
+2025-10-08 09:47:12,662 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:12,663 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:12,663 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:12,663 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:12,663 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:12,663 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:12,663 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:12,663 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:12,663 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:12,663 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:12,663 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:12,664 - unified_data_fetcher - INFO - Retrieved 0 FRED series
+2025-10-08 09:47:12,664 - unified_data_fetcher - INFO - Fetching GOLD (GC=F)...
+2025-10-08 09:47:13,109 - unified_data_fetcher - INFO - Fetching SILVER (SI=F)...
+2025-10-08 09:47:13,259 - unified_data_fetcher - INFO - Fetching PLATINUM (PL=F)...
+2025-10-08 09:47:13,407 - unified_data_fetcher - INFO - Fetching PALLADIUM (PA=F)...
+2025-10-08 09:47:13,557 - unified_data_fetcher - INFO - Fetching COPPER (HG=F)...
+2025-10-08 09:47:13,689 - unified_data_fetcher - INFO - Fetching ALUMINUM (ALI=F)...
+2025-10-08 09:47:13,818 - unified_data_fetcher - INFO - Fetching CRUDE_OIL (CL=F)...
+2025-10-08 09:47:13,959 - unified_data_fetcher - INFO - Fetching BRENT_OIL (BZ=F)...
+2025-10-08 09:47:14,089 - unified_data_fetcher - INFO - Fetching NATURAL_GAS (NG=F)...
+2025-10-08 09:47:14,238 - unified_data_fetcher - INFO - Fetching HEATING_OIL (HO=F)...
+2025-10-08 09:47:14,481 - unified_data_fetcher - INFO - Fetching GASOLINE (RB=F)...
+2025-10-08 09:47:14,629 - unified_data_fetcher - INFO - Fetching WHEAT (ZW=F)...
+2025-10-08 09:47:14,767 - unified_data_fetcher - INFO - Fetching CORN (ZC=F)...
+2025-10-08 09:47:14,896 - unified_data_fetcher - INFO - Fetching SOYBEANS (ZS=F)...
+2025-10-08 09:47:15,129 - unified_data_fetcher - INFO - Fetching COFFEE (KC=F)...
+2025-10-08 09:47:15,351 - unified_data_fetcher - INFO - Fetching SUGAR (SB=F)...
+2025-10-08 09:47:15,584 - unified_data_fetcher - INFO - Fetching COTTON (CT=F)...
+2025-10-08 09:47:15,829 - unified_data_fetcher - INFO - Fetching COCOA (CC=F)...
+2025-10-08 09:47:16,093 - unified_data_fetcher - INFO - Fetching VIX (^VIX)...
+2025-10-08 09:47:16,243 - unified_data_fetcher - INFO - Fetching DXY (DX-Y.NYB)...
+2025-10-08 09:47:16,371 - __main__ - ERROR - Pipeline failed: If using all scalar values, you must pass an index
+Traceback (most recent call last):
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 783, in main
+    macro_data = replicator.fetch_macro_data(start_date='2020-01-01')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 230, in fetch_macro_data
+    return self._fetch_real_macro_data(start_date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 241, in _fetch_real_macro_data
+    dataset = self.unified_manager.get_full_dataset(start_date, end_date)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Data_Repos\unified_data_fetcher.py", line 526, in get_full_dataset
+    commodity_data = self.commodities.get_commodity_prices(start_date=start_date, end_date=end_date)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Data_Repos\unified_data_fetcher.py", line 365, in get_commodity_prices
+    result = pd.DataFrame(data)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\core\frame.py", line 782, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\core\internals\construction.py", line 503, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\core\internals\construction.py", line 114, in arrays_to_mgr
+    index = _extract_index(arrays)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\core\internals\construction.py", line 667, in _extract_index
+    raise ValueError("If using all scalar values, you must pass an index")
+ValueError: If using all scalar values, you must pass an index
+2025-10-08 09:47:40,494 - __main__ - INFO - Starting Trade Replicator Pipeline
+2025-10-08 09:47:40,494 - __main__ - INFO - Initializing with UnifiedDataManager (FRED + World Bank + yfinance)
+2025-10-08 09:47:40,497 - unified_data_fetcher - WARNING - FRED API key not provided. Set FRED_API_KEY environment variable or pass api_key parameter.
+2025-10-08 09:47:40,497 - unified_data_fetcher - WARNING - Get free API key at: https://fred.stlouisfed.org/docs/api/api_key.html
+2025-10-08 09:47:40,497 - unified_data_fetcher - ERROR - wbgapi not installed. Install with: pip install wbgapi
+2025-10-08 09:47:40,498 - unified_data_fetcher - INFO - Enhanced Commodity Fetcher initialized
+2025-10-08 09:47:40,498 - unified_data_fetcher - INFO - Unified Data Manager initialized
+2025-10-08 09:47:40,498 - __main__ - INFO - Trade Replicator initialized
+2025-10-08 09:47:40,498 - __main__ - INFO - Loading trade data from F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\Full_Transac_vAA.XLSX
+2025-10-08 09:47:40,653 - __main__ - INFO - Loaded 69 trades from 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+2025-10-08 09:47:40,653 - __main__ - INFO - Fetching macro-economic data...
+2025-10-08 09:47:40,653 - __main__ - INFO - Fetching real economic data from FRED, World Bank, and yfinance...
+2025-10-08 09:47:40,653 - unified_data_fetcher - INFO - Building comprehensive macro dataset...
+2025-10-08 09:47:40,653 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:40,653 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:40,653 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:40,653 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:40,653 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:40,654 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:40,654 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:40,654 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:40,654 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:40,654 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:40,654 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:47:40,654 - unified_data_fetcher - INFO - Retrieved 0 FRED series
+2025-10-08 09:47:40,654 - unified_data_fetcher - INFO - Fetching GOLD (GC=F)...
+2025-10-08 09:47:41,050 - unified_data_fetcher - INFO - Fetching SILVER (SI=F)...
+2025-10-08 09:47:41,191 - unified_data_fetcher - INFO - Fetching PLATINUM (PL=F)...
+2025-10-08 09:47:41,350 - unified_data_fetcher - INFO - Fetching PALLADIUM (PA=F)...
+2025-10-08 09:47:41,509 - unified_data_fetcher - INFO - Fetching COPPER (HG=F)...
+2025-10-08 09:47:41,647 - unified_data_fetcher - INFO - Fetching ALUMINUM (ALI=F)...
+2025-10-08 09:47:41,797 - unified_data_fetcher - INFO - Fetching CRUDE_OIL (CL=F)...
+2025-10-08 09:47:41,936 - unified_data_fetcher - INFO - Fetching BRENT_OIL (BZ=F)...
+2025-10-08 09:47:42,086 - unified_data_fetcher - INFO - Fetching NATURAL_GAS (NG=F)...
+2025-10-08 09:47:42,259 - unified_data_fetcher - INFO - Fetching HEATING_OIL (HO=F)...
+2025-10-08 09:47:42,429 - unified_data_fetcher - INFO - Fetching GASOLINE (RB=F)...
+2025-10-08 09:47:42,589 - unified_data_fetcher - INFO - Fetching WHEAT (ZW=F)...
+2025-10-08 09:47:42,737 - unified_data_fetcher - INFO - Fetching CORN (ZC=F)...
+2025-10-08 09:47:42,876 - unified_data_fetcher - INFO - Fetching SOYBEANS (ZS=F)...
+2025-10-08 09:47:43,014 - unified_data_fetcher - INFO - Fetching COFFEE (KC=F)...
+2025-10-08 09:47:43,164 - unified_data_fetcher - INFO - Fetching SUGAR (SB=F)...
+2025-10-08 09:47:43,304 - unified_data_fetcher - INFO - Fetching COTTON (CT=F)...
+2025-10-08 09:47:43,443 - unified_data_fetcher - INFO - Fetching COCOA (CC=F)...
+2025-10-08 09:47:43,580 - unified_data_fetcher - INFO - Fetching VIX (^VIX)...
+2025-10-08 09:47:43,721 - unified_data_fetcher - INFO - Fetching DXY (DX-Y.NYB)...
+2025-10-08 09:47:43,893 - unified_data_fetcher - ERROR - Error caching commodity data: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-10-08 09:47:43,893 - __main__ - ERROR - Pipeline failed: 'macro_economic'
+Traceback (most recent call last):
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 783, in main
+    macro_data = replicator.fetch_macro_data(start_date='2020-01-01')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 230, in fetch_macro_data
+    return self._fetch_real_macro_data(start_date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 243, in _fetch_real_macro_data
+    macro_data = dataset['macro_economic']
+                 ~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'macro_economic'
+2025-10-08 09:48:41,526 - __main__ - INFO - Starting Trade Replicator Pipeline
+2025-10-08 09:48:41,528 - __main__ - INFO - Initializing with UnifiedDataManager (FRED + World Bank + yfinance)
+2025-10-08 09:48:41,530 - unified_data_fetcher - WARNING - FRED API key not provided. Set FRED_API_KEY environment variable or pass api_key parameter.
+2025-10-08 09:48:41,531 - unified_data_fetcher - WARNING - Get free API key at: https://fred.stlouisfed.org/docs/api/api_key.html
+2025-10-08 09:48:41,532 - unified_data_fetcher - ERROR - wbgapi not installed. Install with: pip install wbgapi
+2025-10-08 09:48:41,533 - unified_data_fetcher - INFO - Enhanced Commodity Fetcher initialized
+2025-10-08 09:48:41,533 - unified_data_fetcher - INFO - Unified Data Manager initialized
+2025-10-08 09:48:41,534 - __main__ - INFO - Trade Replicator initialized
+2025-10-08 09:48:41,534 - __main__ - INFO - Loading trade data from F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\Full_Transac_vAA.XLSX
+2025-10-08 09:48:41,695 - __main__ - INFO - Loaded 69 trades from 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+2025-10-08 09:48:41,696 - __main__ - INFO - Fetching macro-economic data...
+2025-10-08 09:48:41,696 - __main__ - INFO - Fetching real economic data from FRED, World Bank, and yfinance...
+2025-10-08 09:48:41,697 - unified_data_fetcher - INFO - Building comprehensive macro dataset...
+2025-10-08 09:48:41,697 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:48:41,698 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:48:41,698 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:48:41,699 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:48:41,699 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:48:41,700 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:48:41,700 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:48:41,701 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:48:41,701 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:48:41,702 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:48:41,702 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 09:48:41,702 - unified_data_fetcher - INFO - Retrieved 0 FRED series
+2025-10-08 09:48:41,703 - unified_data_fetcher - INFO - Fetching GOLD (GC=F)...
+2025-10-08 09:48:42,168 - unified_data_fetcher - INFO - Fetching SILVER (SI=F)...
+2025-10-08 09:48:42,328 - unified_data_fetcher - INFO - Fetching PLATINUM (PL=F)...
+2025-10-08 09:48:42,493 - unified_data_fetcher - INFO - Fetching PALLADIUM (PA=F)...
+2025-10-08 09:48:42,621 - unified_data_fetcher - INFO - Fetching COPPER (HG=F)...
+2025-10-08 09:48:42,760 - unified_data_fetcher - INFO - Fetching ALUMINUM (ALI=F)...
+2025-10-08 09:48:42,899 - unified_data_fetcher - INFO - Fetching CRUDE_OIL (CL=F)...
+2025-10-08 09:48:43,060 - unified_data_fetcher - INFO - Fetching BRENT_OIL (BZ=F)...
+2025-10-08 09:48:43,190 - unified_data_fetcher - INFO - Fetching NATURAL_GAS (NG=F)...
+2025-10-08 09:48:43,496 - unified_data_fetcher - INFO - Fetching HEATING_OIL (HO=F)...
+2025-10-08 09:48:43,646 - unified_data_fetcher - INFO - Fetching GASOLINE (RB=F)...
+2025-10-08 09:48:43,794 - unified_data_fetcher - INFO - Fetching WHEAT (ZW=F)...
+2025-10-08 09:48:43,933 - unified_data_fetcher - INFO - Fetching CORN (ZC=F)...
+2025-10-08 09:48:44,072 - unified_data_fetcher - INFO - Fetching SOYBEANS (ZS=F)...
+2025-10-08 09:48:44,211 - unified_data_fetcher - INFO - Fetching COFFEE (KC=F)...
+2025-10-08 09:48:44,351 - unified_data_fetcher - INFO - Fetching SUGAR (SB=F)...
+2025-10-08 09:48:44,510 - unified_data_fetcher - INFO - Fetching COTTON (CT=F)...
+2025-10-08 09:48:44,671 - unified_data_fetcher - INFO - Fetching COCOA (CC=F)...
+2025-10-08 09:48:44,812 - unified_data_fetcher - INFO - Fetching VIX (^VIX)...
+2025-10-08 09:48:44,952 - unified_data_fetcher - INFO - Fetching DXY (DX-Y.NYB)...
+2025-10-08 09:48:45,093 - unified_data_fetcher - ERROR - Error caching commodity data: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-10-08 09:48:45,122 - __main__ - ERROR - Pipeline failed: Only valid with DatetimeIndex, TimedeltaIndex or PeriodIndex, but got an instance of 'RangeIndex'
+Traceback (most recent call last):
+  File "f:\1. perso - travail\2. perso - implementations\coding\python\finance_trading_coding\replicator\main.py", line 783, in main
+    macro_data = replicator.fetch_macro_data(start_date='2020-01-01')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\1. perso - travail\2. perso - implementations\coding\python\finance_trading_coding\replicator\main.py", line 230, in fetch_macro_data
+    return self._fetch_real_macro_data(start_date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\1. perso - travail\2. perso - implementations\coding\python\finance_trading_coding\replicator\main.py", line 250, in _fetch_real_macro_data
+    macro_monthly = macro_combined.resample('MS').mean()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\core\generic.py", line 9834, in resample
+    return get_resampler(
+           ^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\core\resample.py", line 2044, in get_resampler
+    return tg._get_resampler(obj, kind=kind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\core\resample.py", line 2258, in _get_resampler
+    raise TypeError(
+TypeError: Only valid with DatetimeIndex, TimedeltaIndex or PeriodIndex, but got an instance of 'RangeIndex'
+2025-10-08 13:35:26,373 - __main__ - INFO - Starting Trade Replicator Pipeline
+2025-10-08 13:35:26,382 - __main__ - INFO - Initializing with UnifiedDataManager (FRED + World Bank + yfinance)
+2025-10-08 13:35:26,383 - unified_data_fetcher - WARNING - FRED API key not provided. Set FRED_API_KEY environment variable or pass api_key parameter.
+2025-10-08 13:35:26,384 - unified_data_fetcher - WARNING - Get free API key at: https://fred.stlouisfed.org/docs/api/api_key.html
+2025-10-08 13:35:26,384 - unified_data_fetcher - ERROR - wbgapi not installed. Install with: pip install wbgapi
+2025-10-08 13:35:26,384 - unified_data_fetcher - INFO - Enhanced Commodity Fetcher initialized
+2025-10-08 13:35:26,384 - unified_data_fetcher - INFO - Unified Data Manager initialized
+2025-10-08 13:35:26,384 - __main__ - INFO - Trade Replicator initialized
+2025-10-08 13:35:26,384 - __main__ - INFO - Loading trade data from F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\Full_Transac_vAA.XLSX
+2025-10-08 13:35:26,629 - __main__ - INFO - Loaded 69 trades from 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+2025-10-08 13:35:26,629 - __main__ - INFO - Fetching macro-economic data...
+2025-10-08 13:35:26,629 - __main__ - INFO - Fetching real economic data from FRED, World Bank, and yfinance...
+2025-10-08 13:35:26,629 - unified_data_fetcher - INFO - Building comprehensive macro dataset...
+2025-10-08 13:35:26,629 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 13:35:26,629 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 13:35:26,629 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 13:35:26,629 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 13:35:26,629 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 13:35:26,629 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 13:35:26,629 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 13:35:26,629 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 13:35:26,629 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 13:35:26,629 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 13:35:26,629 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 13:35:26,630 - unified_data_fetcher - INFO - Retrieved 0 FRED series
+2025-10-08 13:35:26,630 - unified_data_fetcher - INFO - Fetching GOLD (GC=F)...
+2025-10-08 13:35:28,418 - unified_data_fetcher - INFO - Fetching SILVER (SI=F)...
+2025-10-08 13:35:28,569 - unified_data_fetcher - INFO - Fetching PLATINUM (PL=F)...
+2025-10-08 13:35:28,710 - unified_data_fetcher - INFO - Fetching PALLADIUM (PA=F)...
+2025-10-08 13:35:28,860 - unified_data_fetcher - INFO - Fetching COPPER (HG=F)...
+2025-10-08 13:35:29,040 - unified_data_fetcher - INFO - Fetching ALUMINUM (ALI=F)...
+2025-10-08 13:35:29,221 - unified_data_fetcher - INFO - Fetching CRUDE_OIL (CL=F)...
+2025-10-08 13:35:29,381 - unified_data_fetcher - INFO - Fetching BRENT_OIL (BZ=F)...
+2025-10-08 13:35:29,532 - unified_data_fetcher - INFO - Fetching NATURAL_GAS (NG=F)...
+2025-10-08 13:35:29,701 - unified_data_fetcher - INFO - Fetching HEATING_OIL (HO=F)...
+2025-10-08 13:35:29,902 - unified_data_fetcher - INFO - Fetching GASOLINE (RB=F)...
+2025-10-08 13:35:30,092 - unified_data_fetcher - INFO - Fetching WHEAT (ZW=F)...
+2025-10-08 13:35:30,261 - unified_data_fetcher - INFO - Fetching CORN (ZC=F)...
+2025-10-08 13:35:30,410 - unified_data_fetcher - INFO - Fetching SOYBEANS (ZS=F)...
+2025-10-08 13:35:30,582 - unified_data_fetcher - INFO - Fetching COFFEE (KC=F)...
+2025-10-08 13:35:30,754 - unified_data_fetcher - INFO - Fetching SUGAR (SB=F)...
+2025-10-08 13:35:30,926 - unified_data_fetcher - INFO - Fetching COTTON (CT=F)...
+2025-10-08 13:35:31,117 - unified_data_fetcher - INFO - Fetching COCOA (CC=F)...
+2025-10-08 13:35:31,297 - unified_data_fetcher - INFO - Fetching VIX (^VIX)...
+2025-10-08 13:35:31,446 - unified_data_fetcher - INFO - Fetching DXY (DX-Y.NYB)...
+2025-10-08 13:35:31,638 - unified_data_fetcher - ERROR - Error caching commodity data: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-10-08 13:35:31,639 - __main__ - ERROR - Pipeline failed: Only valid with DatetimeIndex, TimedeltaIndex or PeriodIndex, but got an instance of 'RangeIndex'
+Traceback (most recent call last):
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 783, in main
+    macro_data = replicator.fetch_macro_data(start_date='2020-01-01')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 230, in fetch_macro_data
+    return self._fetch_real_macro_data(start_date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 250, in _fetch_real_macro_data
+    macro_monthly = macro_combined.resample('MS').mean()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\core\generic.py", line 9834, in resample
+    return get_resampler(
+           ^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\core\resample.py", line 2044, in get_resampler
+    return tg._get_resampler(obj, kind=kind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AA\Utilities\Python\Lib\site-packages\pandas\core\resample.py", line 2258, in _get_resampler
+    raise TypeError(
+TypeError: Only valid with DatetimeIndex, TimedeltaIndex or PeriodIndex, but got an instance of 'RangeIndex'
+2025-10-08 14:25:16,412 - __main__ - INFO - Starting Trade Replicator Pipeline
+2025-10-08 14:25:16,413 - __main__ - INFO - Initializing with UnifiedDataManager (FRED + World Bank + yfinance)
+2025-10-08 14:25:16,442 - unified_data_fetcher - WARNING - FRED API key not provided. Set FRED_API_KEY environment variable or pass api_key parameter.
+2025-10-08 14:25:16,442 - unified_data_fetcher - WARNING - Get free API key at: https://fred.stlouisfed.org/docs/api/api_key.html
+2025-10-08 14:25:16,442 - unified_data_fetcher - ERROR - wbgapi not installed. Install with: pip install wbgapi
+2025-10-08 14:25:16,443 - unified_data_fetcher - INFO - Enhanced Commodity Fetcher initialized
+2025-10-08 14:25:16,443 - unified_data_fetcher - INFO - Unified Data Manager initialized
+2025-10-08 14:25:16,443 - __main__ - INFO - Trade Replicator initialized
+2025-10-08 14:25:16,443 - __main__ - INFO - Loading trade data from F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\Full_Transac_vAA.XLSX
+2025-10-08 14:25:16,779 - __main__ - INFO - Loaded 69 trades from 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+2025-10-08 14:25:16,779 - __main__ - INFO - Fetching macro-economic data...
+2025-10-08 14:25:16,779 - __main__ - INFO - Fetching real economic data from FRED, World Bank, and yfinance...
+2025-10-08 14:25:16,779 - unified_data_fetcher - INFO - Building comprehensive macro dataset...
+2025-10-08 14:25:16,779 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 14:25:16,779 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 14:25:16,780 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 14:25:16,780 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 14:25:16,780 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 14:25:16,780 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 14:25:16,780 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 14:25:16,780 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 14:25:16,780 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 14:25:16,780 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 14:25:16,780 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 14:25:16,780 - unified_data_fetcher - INFO - Retrieved 0 FRED series
+2025-10-08 14:25:16,781 - unified_data_fetcher - INFO - Fetching GOLD (GC=F)...
+2025-10-08 14:25:18,621 - unified_data_fetcher - INFO - Fetching SILVER (SI=F)...
+2025-10-08 14:25:18,781 - unified_data_fetcher - INFO - Fetching PLATINUM (PL=F)...
+2025-10-08 14:25:18,941 - unified_data_fetcher - INFO - Fetching PALLADIUM (PA=F)...
+2025-10-08 14:25:19,131 - unified_data_fetcher - INFO - Fetching COPPER (HG=F)...
+2025-10-08 14:25:19,311 - unified_data_fetcher - INFO - Fetching ALUMINUM (ALI=F)...
+2025-10-08 14:25:19,450 - unified_data_fetcher - INFO - Fetching CRUDE_OIL (CL=F)...
+2025-10-08 14:25:19,629 - unified_data_fetcher - INFO - Fetching BRENT_OIL (BZ=F)...
+2025-10-08 14:25:19,800 - unified_data_fetcher - INFO - Fetching NATURAL_GAS (NG=F)...
+2025-10-08 14:25:19,961 - unified_data_fetcher - INFO - Fetching HEATING_OIL (HO=F)...
+2025-10-08 14:25:20,134 - unified_data_fetcher - INFO - Fetching GASOLINE (RB=F)...
+2025-10-08 14:25:20,304 - unified_data_fetcher - INFO - Fetching WHEAT (ZW=F)...
+2025-10-08 14:25:20,505 - unified_data_fetcher - INFO - Fetching CORN (ZC=F)...
+2025-10-08 14:25:20,914 - unified_data_fetcher - INFO - Fetching SOYBEANS (ZS=F)...
+2025-10-08 14:25:21,084 - unified_data_fetcher - INFO - Fetching COFFEE (KC=F)...
+2025-10-08 14:25:21,254 - unified_data_fetcher - INFO - Fetching SUGAR (SB=F)...
+2025-10-08 14:25:21,404 - unified_data_fetcher - INFO - Fetching COTTON (CT=F)...
+2025-10-08 14:25:21,561 - unified_data_fetcher - INFO - Fetching COCOA (CC=F)...
+2025-10-08 14:25:21,769 - unified_data_fetcher - INFO - Fetching VIX (^VIX)...
+2025-10-08 14:25:21,930 - unified_data_fetcher - INFO - Fetching DXY (DX-Y.NYB)...
+2025-10-08 14:25:22,102 - unified_data_fetcher - ERROR - Error caching commodity data: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-10-08 14:25:22,103 - __main__ - ERROR - Data does not have DatetimeIndex, has <class 'pandas.core.indexes.range.RangeIndex'>
+2025-10-08 14:25:22,103 - __main__ - ERROR - Pipeline failed: Data must have DatetimeIndex for resampling
+Traceback (most recent call last):
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 799, in main
+    macro_data = replicator.fetch_macro_data(start_date='2020-01-01')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 230, in fetch_macro_data
+    return self._fetch_real_macro_data(start_date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 260, in _fetch_real_macro_data
+    raise ValueError("Data must have DatetimeIndex for resampling")
+ValueError: Data must have DatetimeIndex for resampling
+2025-10-08 20:41:23,563 - __main__ - INFO - Starting Trade Replicator Pipeline
+2025-10-08 20:41:23,573 - __main__ - INFO - Initializing with UnifiedDataManager (FRED + World Bank + yfinance)
+2025-10-08 20:41:23,601 - unified_data_fetcher - WARNING - FRED API key not provided. Set FRED_API_KEY environment variable or pass api_key parameter.
+2025-10-08 20:41:23,601 - unified_data_fetcher - WARNING - Get free API key at: https://fred.stlouisfed.org/docs/api/api_key.html
+2025-10-08 20:41:23,602 - unified_data_fetcher - ERROR - wbgapi not installed. Install with: pip install wbgapi
+2025-10-08 20:41:23,602 - unified_data_fetcher - INFO - Enhanced Commodity Fetcher initialized
+2025-10-08 20:41:23,602 - unified_data_fetcher - INFO - Unified Data Manager initialized
+2025-10-08 20:41:23,602 - __main__ - INFO - Trade Replicator initialized
+2025-10-08 20:41:23,602 - __main__ - INFO - Loading trade data from F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\Full_Transac_vAA.XLSX
+2025-10-08 20:41:23,926 - __main__ - INFO - Loaded 69 trades from 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+2025-10-08 20:41:23,927 - __main__ - INFO - Fetching macro-economic data...
+2025-10-08 20:41:23,928 - __main__ - INFO - Fetching real economic data from FRED, World Bank, and yfinance...
+2025-10-08 20:41:23,928 - unified_data_fetcher - INFO - Building comprehensive macro dataset...
+2025-10-08 20:41:23,928 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 20:41:23,928 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 20:41:23,928 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 20:41:23,928 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 20:41:23,928 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 20:41:23,928 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 20:41:23,928 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 20:41:23,928 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 20:41:23,928 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 20:41:23,928 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 20:41:23,928 - unified_data_fetcher - ERROR - FRED API not initialized
+2025-10-08 20:41:23,929 - unified_data_fetcher - INFO - Retrieved 0 FRED series
+2025-10-08 20:41:23,929 - unified_data_fetcher - INFO - Fetching GOLD (GC=F)...
+2025-10-08 20:41:24,626 - unified_data_fetcher - INFO - Fetching SILVER (SI=F)...
+2025-10-08 20:41:24,922 - unified_data_fetcher - INFO - Fetching PLATINUM (PL=F)...
+2025-10-08 20:41:25,279 - unified_data_fetcher - INFO - Fetching PALLADIUM (PA=F)...
+2025-10-08 20:41:25,542 - unified_data_fetcher - INFO - Fetching COPPER (HG=F)...
+2025-10-08 20:41:25,816 - unified_data_fetcher - INFO - Fetching ALUMINUM (ALI=F)...
+2025-10-08 20:41:26,091 - unified_data_fetcher - INFO - Fetching CRUDE_OIL (CL=F)...
+2025-10-08 20:41:26,367 - unified_data_fetcher - INFO - Fetching BRENT_OIL (BZ=F)...
+2025-10-08 20:41:26,671 - unified_data_fetcher - INFO - Fetching NATURAL_GAS (NG=F)...
+2025-10-08 20:41:26,951 - unified_data_fetcher - INFO - Fetching HEATING_OIL (HO=F)...
+2025-10-08 20:41:27,195 - unified_data_fetcher - INFO - Fetching GASOLINE (RB=F)...
+2025-10-08 20:41:27,512 - unified_data_fetcher - INFO - Fetching WHEAT (ZW=F)...
+2025-10-08 20:41:27,786 - unified_data_fetcher - INFO - Fetching CORN (ZC=F)...
+2025-10-08 20:41:28,040 - unified_data_fetcher - INFO - Fetching SOYBEANS (ZS=F)...
+2025-10-08 20:41:28,297 - unified_data_fetcher - INFO - Fetching COFFEE (KC=F)...
+2025-10-08 20:41:28,588 - unified_data_fetcher - INFO - Fetching SUGAR (SB=F)...
+2025-10-08 20:41:28,886 - unified_data_fetcher - INFO - Fetching COTTON (CT=F)...
+2025-10-08 20:41:29,172 - unified_data_fetcher - INFO - Fetching COCOA (CC=F)...
+2025-10-08 20:41:29,447 - unified_data_fetcher - INFO - Fetching VIX (^VIX)...
+2025-10-08 20:41:29,724 - unified_data_fetcher - INFO - Fetching DXY (DX-Y.NYB)...
+2025-10-08 20:41:30,032 - unified_data_fetcher - ERROR - Error caching commodity data: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-10-08 20:41:30,032 - __main__ - ERROR - Data does not have DatetimeIndex, has <class 'pandas.core.indexes.range.RangeIndex'>
+2025-10-08 20:41:30,033 - __main__ - ERROR - Pipeline failed: Data must have DatetimeIndex for resampling
+Traceback (most recent call last):
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 799, in main
+    macro_data = replicator.fetch_macro_data(start_date='2020-01-01')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 230, in fetch_macro_data
+    return self._fetch_real_macro_data(start_date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1. perso - travail\2. Perso - Implementations\Coding\Python\Finance_Trading_Coding\Replicator\main.py", line 260, in _fetch_real_macro_data
+    raise ValueError("Data must have DatetimeIndex for resampling")
+ValueError: Data must have DatetimeIndex for resampling

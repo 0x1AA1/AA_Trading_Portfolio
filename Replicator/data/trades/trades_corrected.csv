@@ -1,0 +1,94 @@
+ISIN,Name,Quantity,Price_Cours,Date,Value_At_Date (EUR),Comment,Class,Strategy
+Cash EUR,Cash EUR,1050.0,1.0,2025-01-06,1050,,SC - NL,
+Former_Broker, ETC GOLD AMUNDI PHYS,10.0,99.98,2025-01-07,999.8000000000001,Gold Exposure - Real gold bars audited - avoiding synth gold etcs which can carry a credit risk higher than advertised,SC - NL,Momentum
+Cash EUR,Cash EUR,45.0,1.0,2025-01-07,45,,SC - NL,
+Former_Broker, ETC GOLD AMUNDI PHYS,10.0,109.5,2025-02-05,1095,"Liquidating - 10% gain - too slow in aggregation, will take year long to reach 4k for roughly 40% gain, beating market but not substantially, gold silver ratio to watch - silver breakout potentially - needed exposure to silver - used a bit of leverage at a moment to try out how leveraged ETF work",SC - NL,Momentum
+Cash EUR,Cash EUR,39.07,1.0,2025-02-05,39.07,,SC - NL,
+Former_Broker,Starbucks short x4,1000.0,0.72,2025-02-08,720,"Inverse correlation on coffee price and coffee places such a sbux - divergence appearing (stock up, coffee price up) whereas margins will compress by next earnings, to hold until end of may - gains aim +50% - pair trading in commo",PT - DN,Arbitrage / Mean reversing
+Former_Broker,GSCI Coffee short X3,1.0,300.0,2025-02-08,300,Short coffee as cover - it spiked already and price seems way too off to incentivise farmers to sell again - supply shock seems continious over next years until crops yield enhances - aim for 10% downwards on coffee price on short term - pair trading in commo,PT - DN,Arbitrage / Mean reversing
+Former_Broker, ETC AMUNDI PHYS,1.0,111.831,2025-02-08,111.831,Awaiting for other opportunities - keep taking gold appreciation,SC - NL,Momentum
+Cash EUR,Cash EUR,31.66,1.0,2025-02-08,31.66,,SC - NL,
+Cash EUR,Cash EUR,1613.491,1.0,2025-03-03,1613.491,,SC - NL,
+Former_Broker,XAGUSD 45C 1225,3000.0,0.089,2025-03-04,267,"Shortage in XAG (silver) supply >> demand, and supply shortage is underpriced vis-à-vis solar power need + potential need from central banks / sov funds / AM later after gold - issue is storage cost higher than gold - metallurgical need to surge - aim for +50% on option",SC - NL,Momentum
+Former_Broker,IAMGOLD Levrage X3,160.0,8.5,2025-03-04,1360,Aim for +30% - May benefit from stabilisation of burkina fasso govt and efforts to build infrastructure - carry effect of gold sector and reduced cost on labor,SC - NL,Momentum
+Cash EUR,Cash EUR,172.32,1.0,2025-03-04,172.32,,SC - NL,
+Former_Broker,CBOE VIX x3 Long,3500.0,0.11,2025-03-29,385,"market complacency until a week before tariffs, vix relatively low pre-storm -> x4 gains post transaction costs (1103eur) - profitting from tariffs vol spikes on announces - luckily the numbers were calculated willy nilly based on trade deficit, not taking into acc the deficit caused by petrodollars - a cause of hegemony reversed, dollar to be shorted from here, which is also the intention of USGOP - devalue currency for better exports - do not go against the wind",DN - Gamma long,Heavy spike
+Cash EUR,Cash EUR,172.32,1.0,2025-03-29,1901.44,,SC - DN,Mean Reversing
+Former_Broker,CCJ US 70C 0625,3000.0,0.09,2025-04-15,270,"Nuclear exposure, potential sanctions on neighbooring countries and trading partners in case of non ending of US proxy war w/ Russia via Ukraine (think kazakhstan uranium sanctionned) - operates processing services which are the lucrative part of nuclear right now - high P/E but will benefit from news sentiment - relatively underpriced vol compared to incoming events - major player poised to take advantage of tailwind - aim for 0.8 - breakeven at 0.2",SC - DN,Mean Reversing + momentum
+Former_Broker,CCJ US 30p 0625,1500.0,0.23,2025-04-15,345,"Nuclear exposure, potential sanctions on neighbooring countries and trading partners in case of non ending of US proxy war w/ Russia via Ukraine (think kazakhstan uranium sanctionned) - operates processing services which are the lucrative part of nuclear right now - high P/E but will benefit from news sentiment - relatively underpriced vol compared to incoming events - major player poised to take advantage of tailwind - use as protection - supported by uranium servicing prices",SC - DN,Mean Reversing + momentum
+Former_Broker,HCC US 70C 1225,1860.0,0.16,2025-04-15,297.6,Local vol underpriced - See cost curve of metalurgical coal - best efficiency in the world + coal equity hitting low - metalurgical coal +4% CAGR - heavy reliance on coal worldwide (EM especially) - next earnings calls can be very deterministic if profit margins still positive despite current coal price being low - aim for 0.65 - breakeven at 0.3,SC - DN,Mean Reversing + momentum
+Former_Broker,HCC US 35p 1225,900.0,0.27,2025-04-15,243.00000000000003,Local vol underpriced - See cost curve of metalurgical coal - best efficiency in the world + coal equity hitting low - metalurgical coal +4% CAGR - heavy reliance on coal worldwide (EM especially) - next earnings calls can be very deterministic if profit margins still positive despite current coal price being low - use as protection - supported by met coal price,SC - DN,Mean Reversing + momentum
+Former_Broker, ETC AMUNDI PHYS,20.0,112.25,2025-04-15,2245,Awaiting for other opportunities - keep taking gold appreciation - long on short term gold vs USD especially given tariff situation,SC - NL,Momentum
+Cash EUR,Cash EUR,35.4,1.0,2025-04-15,35.4,,SC - NL,
+Cash EUR,Cash EUR,5133.92,1.0,2025-05-20,5133.92,,SC - NL,
+,,,,,Broker change,,,
+DE000ME850L6,BYD LEVERAGE X5,54.0,17.85,2025-05-31,963.9000000000001,"Pair trading EV - Sectorial bullish - Chinese EV > US EV, EU Trailing, looking for convergence towards mean between an overvalued stock (TSLA) and an undervalued stock (BYD)",PT - DN,Mean Reversing + momentum
+DE000MK5FEF0,Tesla SHORT X8,7936.0,0.143,2025-05-31,1134.848,"Pair trading EV - Sectorial bullish - Chinese EV > US EV, EU Trailing, looking for convergence towards mean between an overvalued stock (TSLA) and an undervalued stock (BYD)",PT - DN,Mean Reversing + momentum
+FR0013416716, ETC AMUNDI PHYS,21.0,115.007,2025-05-31,2415.147,High liq. Stabilisation of portfolio awaiting for opportunities to study,SC - NL,Momentum
+Cash EUR,Cash EUR,594.92,1.0,2025-05-31,594.92,,SC - NL,
+DE000ME850L6,BYD LEVERAGE X5,54.0,12.74,2025-06-30,687.96,Starting to get burned by theta decay AND real vol vs priced vol- hurting the returns. Position taken when tesla was 335 - went up to x3 on the short because of Elon tweets and failed to sell. Holding too long loses lots of money in this type of instrument,PT - DN,Mean Reversing
+DE000MK5FEF0,Tesla SHORT X8,6800.0,0.058,2025-06-30,394.40000000000003,Starting to get burned by theta decay AND real vol vs priced vol- hurting the returns. Position taken when tesla was 335 - went up to x3 on the short because of Elon tweets and failed to sell. Holding too long loses lots of money in this type of instrument,PT - DN,Mean Reversing
+ DE000MK45SK5,PLTR US LEVERAGE X6,7.0,29.87,2025-06-30,209.09,"""State"" backed - Over valued, yet will be higher on earnings incoming",SC - NL,Momentum
+FR0013416716,ETC AMUNDI PHYS,21.0,111.085,2025-06-30,2332.785,High liq. Stabilisation of portfolio awaiting for opportunities to study,SC - NL,Momentum
+Cash EUR,Cash EUR,55.3,1.0,2025-06-30,55.3,,SC - NL,
+DE000ME850L6,BYD LEVERAGE X5,54.0,17.31,2025-07-31,934.7399999999999,"Coming back up, market being rational ? Price wars are received … in a mitigated way not positive way",PT - DN,Mean Reversing
+DE000MK45SK5,PLTR US LEVERAGE X6,7.0,94.66,2025-07-31,662.62,"Up 300% on naked long, take profit avoid burns - earnings still disappointing factually speaking (fell from 180 to 150 two weeks after I left)",SC - NL,Momentum
+DE000MK5FEF0,Tesla SHORT X8,6800.0,0.035,2025-07-31,238.00000000000003,,PT - DN,Mean Reversing
+DE000MK95EJ2,Tesla SHORT X10,36.0,7.1,2025-07-31,255.6,"Doubling on the short after 2nd tweets of musk on politics, and earnings call announcing future hard quarters - Irrational market - x10 just for the next jump down then exiting TSLA - Never bet with or against musk, Warren / Munger were right",PT - DN,Mean Reversing
+FR0013416716,ETC AMUNDI PHYS,21.0,114.303,2025-07-31,2400.363,,SC - NL,Momentum
+Cash EUR,Cash EUR,27.58,1.0,2025-07-31,27.58,,SC - NL,
+DE000MG1VFU8,HL 12C 190925,2000.0,0.261,2025-08-04,522,"Highest sectorial performance in terms of equity ytd (silver), high likely that hecla (AISC approx 8usd/oz one of best production and cost ctrl in sector) benefits from high growth compared to sector avg of ~14, up to 20) - US corp, tariff hedged - incoming silver criticality for solar",SC - NL,Momentum
+,BTG 6C 190925,2000.0,0.061,2025-08-04,122,"Instead of exposure to gold, exposure to miners - given earlier divergence between growth in the two, leveraged through options, B2G best valuation in sector (production, AISC, sales, market cap, debt, operating margins, target at least 5.5 by year end)",SC - NL,Momentum
+FR0013416716,ETC AMUNDI PHYS,21.0,116.322,2025-08-04,2442.762,To be reduced - exposure to gold is on a plateau,SC - NL,Momentum
+DE000MG5MTK,NVDA 120p 171225,1142.0,0.175,2025-08-04,199.85,AI seems bubbly - the only cash gen corp in the bubble - revenue concentration risk in hypervisors clients - gamma long,SC - DN,Momentum
+DE000MG6ERS,NVDA 220C 190126,400.0,0.25,2025-08-04,100,AI seems bubbly - the only cash gen corp in the bubble - revenue concentration risk in hypervisors clients - gamma long,SC - DN,Momentum
+DE000ME850L6,BYD LEVERAGE X5,54.0,7.11,2025-08-04,383.94,"Chinese state unhappy about price cuts, despite company good perf, sentiment analysis gives negative returns on social media on the stock, good returns on products - to be liquidated",PT - DN,Mean Reversing
+GFI,GOLD FIELDS LTD ADR,73.0,25.28,2025-08-04,1845.44,One of the most vol miners despite market cap - exposure to gold-related-equity before H1 earnings call - to be liquidated at 33usd - care of taxation / royalties (South Africa) and long term contracts on gold contracting margins despite high gold spot price,SC - NL,Momentum
+Cash EUR,Cash EUR,23.21,1.0,2025-08-04,23.21,,SC - NL,
+DE000ME850L6,BYD LEVERAGE X5,54.0,6.64,2025-08-31,358.56,Liquidating,PT - DN,Mean Reversing
+,Baidu 100C 190925,2312.0,0.07,2025-08-31,161.84,Heavily underpriced volatility - Left to exercise on expiry - learned about liquidity lock in,SC - DN,Mean Reversing
+DE000MJ2HAZ2,Baidu 105C 190925,2222.0,0.15,2025-08-31,333.3,"Heavily underpriced volatility - put not far from ATM but fundamentals are strong, might expire worthless",SC - DN,Mean Reversing
+,Baidu 70p 190925,828.0,0.26,2025-08-31,215.28,AI seems bubbly - the only cash gen corp in the bubble - concentration risk in hypervisors,SC - DN,Mean Reversing
+DE000MG5MTK,NVDA 120p 171225,1142.0,0.11,2025-08-31,125.62,AI seems bubbly - the only cash gen corp in the bubble - concentration risk in hypervisors,SC - DN,Momentum
+DE000MG6ERS,NVDA 220C 190126,400.0,0.21,2025-08-31,84,Other leg of a wide straddle,SC - DN,Momentum
+DE000GS91YS,CAC40 8000C 0925 ,10000.0,0.085,2025-08-31,850.0000000000001,To be sold soon - otherwise can expire worthless,DN - Gamma long,Heavy spike
+DE000SY761Y8,CAC40 7400P 0925 ,25000.0,0.038,2025-08-31,950,"Heavily underpriced volatility - despite platinium and 6E metals being up 30% YTD, effect on operating margin, FCF and earnings can jump - operates in tax sensitive jurisdiction -  risk from employees (wages / infla / fx risk, SA & Zimbabwe) 6E metals and gold actor (350koz/annum) - underpriced equity also in recent bump to 7",DN - Gamma long,Heavy spike
+DE000MJ3WUT0,SBSW US 8C 190925,967.0,0.28,2025-08-31,270.76000000000005,"one of few plat miners, underpriced, and vol underpriced (AMM) vs. Impala (slightly) despite diversification of mining, lesser riots, and only JV exposure to zimbabwe",SC - NL,Mean Reversing
+Cash EUR,Cash EUR,4676.72,1.0,2025-08-31,4676.72,"Higher cash pos benefitted from options on gold sold back, to be correctly distributed",SC - NL,
+DE000MG1VFU8,HL US Leverage x4,380.0,6.36,2025-09-26,2416.8,"Up 140% - profitted from previously mentionned elements on call option, converted call gains into equityx4 - awaiting FOP transfer",SC - NL,Momentum
+DE000MM2L5L5,B2Gold Leverage X10,17.0,47.56,2025-09-26,808.52,"up 100% High leverage - profitting from a quick fall - post ex-dividend, on price which will rebounce on production / earnings shock for Q3. (part of inventory not counted on Q2 sales- 20koz) - spot price sales, low AISC still post earnings - still same fundamentals of company + hedge funds increasing position - awaiting FOP transfer",SC - NL,Momentum
+DE000MJ3WUT0,SBSW US 8C 190925,967.0,1.31,2025-09-26,1266.77,"Expired as predicted in the money since platinum price was going to sustain at 1.3 - SBSW still heavily bullish, to be rolled over for 0126 - awaiting FOP transfer",SC - NL,Mean Reversing
+DE000MJ2HAZ2,Baidu 105C 190925,2222.0,2.58,2025-09-26,5732.76,"Expired as predicted in the money since company was heavily underpriced compared to fundamentals. Slightly overvalued rn, and consumer of chips not major producer of AI, to be replaced by Huawei or Huawei-equivalent - - awaiting FOP transfer",PT - DN,Mean Reversing
+DE000MK641A4,Xpeng 27C 190126,3300.0,0.061,2025-09-26,201.29999999999998,"Still bullish EV - Given Tariffs dodging through thailand and soon austria, given margins of xpeng remaining large despite price war, a x2 valuation is plausible (awaiting for sales numbers, expecting margin explosion given rise in sales abroad and controlled costs) - - awaiting FOP transfer",PT - DN,Mean Reversing
+DE000MG0YVR7,PDD 150C 171225,2413.0,0.355,2025-09-26,856.615,"Underpriced vol - despite consumer spending lowering its still in growth, market pen in EU, price increase instead of absorbtion of tariffs in US.Up 100% - at break even.
+Could dethrone amazon, was already at 140+ with worse fundamentals. De-escalation w/ china can increase price - Bullish but delta neutral because in case of agression with china stock can go way lower
+good PE and to decrease post nov 20 earnings - - awaiting FOP transfer",NL,Mean Reversing
+,USD/CHF 0.79P 171225,220.0,0.89,2025-09-26,195.8,"Though not neutral, it is to hedge all my FX risk on USD returns (most of the options and equity / levraged warrants have payoff in USD + FX swap) - - awaiting FOP transfer",NL,Momentum
+DE000MK1G1U7,PLTR US 90p 171215,1000.0,0.15,2025-09-26,150,Hedging US market crisis potential - which can touch pltr more than others due to 150+ P/E ratio - - awaiting FOP transfer,PT - DN,Momentum
+DE000GV9M723,TSLA 280P 1125,2500.0,0.1,2025-09-26,250,"September ""bearish seasonality"" hedge - Time decay is against TSLA, and with chinese EV makers. Q3 earnings will be key to determine sectorial direction for 2 future years. Europe statistics seem favorable for Chinese EV makers, TSLA only surpasses in couple of country (only norway stable) - to see august sales - - awaiting FOP transfer",PT - DN,Momentum
+,CAC40 7400P 0925 ,0.0,0.0,2025-09-26,0,Straddle Expired worthless - net loss around 2k on position - to AVOID speculating on volatility to be different from historical on protests in France - tu vois bien que l'économie continue à fonctionner correctement => pourquoi douter de la distribution de capital basée sur les sentiments des AM ? ,PT - DN,Heavy spike
+DE000MG5MTK,NVDA 120p 171225,1142.0,0.09,2025-09-26,102.78,Straddle not yet liquidated ( - awaiting FOP transfer),SC - DN,Momentum
+DE000MG6ERS,NVDA 220C 190126,400.0,0.236,2025-09-26,94.39999999999999,Straddle not yet liquidated ( - awaiting FOP transfer),SC - DN,Momentum
+DE000MK367M1,NOVOB 490C 171225,3500.0,0.1,2025-09-26,350,"Undervalued, despite operating margins being decent, and plans to reduce costs - shares buybacks stopped, they were done when company was overvalued. A lucky news would spark upside, one of the biggest losers of 2025 despite healthy org - no point in making straddle because of fundamentals creating support for price - - awaiting FOP transfer",SC - DN,Mean Reversing + momentum
+DE000MJ8VJV0,NOVOB 520C 171225,2000.0,0.09,2025-09-26,180,"Undervalued, despite operating margins being decent, and plans to reduce costs - shares buybacks stopped, they were done when company was overvalued. A lucky news would spark upside, one of the biggest losers of 2025 despite healthy org - no point in making straddle because of fundamentals creating support for price - - awaiting FOP transfer",SC - DN,Mean Reversing + momentum
+-,Total position and cash 29/09,14041.63,1.0,2025-09-29,14041.63,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,

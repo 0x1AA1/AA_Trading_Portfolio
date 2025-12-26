@@ -1,0 +1,2 @@
+prediction_date,target_month,trade_will_occur,probability_trade_occurs,probability_no_trade,predicted_trade_count,predicted_trade_value_eur
+2025-10-05,2025-11,True,1.0,0.0,5.65,4337.081849999994

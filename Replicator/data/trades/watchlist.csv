@@ -1,0 +1,38 @@
+Ticker,Logic,Direction,Asset-Class
+RGTI,Quantum => Shor alg,Short,Equity
+OPEN,Realestate vs Blackstone,Short,Equity
+QBTS,Quantum => Shor alg,Short,Equity
+QUBT,Quantum => Shor alg,Short,Equity
+IONQ,Quantum => Shor alg,Short,Equity
+MSTR,Bitcoin hypersensitivity + vol arbitrages,Short,Equity
+OKLO,Way above fundamentals,Short,Equity
+TSLA,Way above fundamentals,Short,Equity
+PLTR,Way above fundamentals,Short,Equity
+SRPT,Gene therapy is actually decent - few deaths here and there,Long,Equity
+HCC,"Met Coal reaching support, market on backwardation",Long,Equity
+SBSW,Platinum baby mixed with gold,Long,Equity
+AMD,Underpriced vs NVDA - tailwind inc,Long,Equity
+Intel,Heavy long on intel … but govt got involved,Long,Equity
+ORCL,AI Circular economy + surveillance state sentiment analysis,Short,Equity
+META,Surveillance state sentiment analysis,Short,Equity
+ALB,Cloud activity in China if it follows hypervisor trajectory in US,Long,Equity
+ABVX,Solid fundamentals,Long,Equity
+RIO,"Solid fundamentals - P/E 9.9, Div 6% - wait for steel lower prices",Long,Equity
+Equinor,Solid EU integration - no descalation in ukraine yet - low and controlled costs - very good margins can be sustained until 40USD/barrel,Long,Equity
+OCY,Hard to sustain below 55usd/bbl - wait for OCY to bottom,Long,Equity
+PB,best margins in industry + offshore new discoveries - major reserves inc,Long,Equity
+HMY,Gold,Long,Equity
+GFI,Gold,Long,Equity
+BTG,Gold,Long,Equity
+CCJ,Uranium,Long,Equity
+IMPUY,Platinum,Long,Equity
+EDEN,"Like many french stocks undervalued. solid non visible regulatory moat - 15% growth, high div, low valuation",Long,Equity
+German REITS,Undervalued,Long,Real-Estate
+XAUUSD,Gold,Long,Commodity
+XAGUSD,Silver,Long,Commodity
+USDCHF,FX risk mgmt,Short,FX
+EURUSD,FX risk mgmt,Long,FX
+USD TY 1Y,Us treasuries 1y mat,Short,Bonds
+BRL TR 1Y,Brazilian economy seems underpriced compared to real value - bond yield will lower ?,Long,Bonds
+Nigeria eurobonds,Low oil price => default potential,Short,Bonds
+OAT,French begging IMF ?,Short,Bonds

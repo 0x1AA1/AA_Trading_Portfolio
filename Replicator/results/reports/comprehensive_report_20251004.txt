@@ -1,0 +1,51 @@
+================================================================================
+TRADE REPLICATOR - COMPREHENSIVE ANALYSIS REPORT
+================================================================================
+Generated: 2025-10-04 22:30:12
+
+1. DATA INVENTORY
+--------------------------------------------------------------------------------
+Historical Trades: 69 trades
+Trade Date Range: 2025-01-06 00:00:00 to 2025-09-29 00:00:00
+Macro Data Points: 70 months
+Macro Indicators: 26 features
+Engineered Features: 173 total features
+
+2. TRADE STATISTICS
+--------------------------------------------------------------------------------
+Total Trade Value: 70552.32 EUR
+Average Trade Size: 1022.50 EUR
+Median Trade Size: 345.00 EUR
+
+Trade Direction Distribution:
+  Long: 34 (49.3%)
+  Neutral: 34 (49.3%)
+  Unknown: 1 (1.4%)
+
+Strategy Distribution:
+  Momentum: 26
+  Mean Reversing: 16
+  Unknown: 14
+  Mean Reversing + momentum: 8
+  Heavy spike: 3
+
+3. MODEL PERFORMANCE
+--------------------------------------------------------------------------------
+Models trained on 70% of historical data
+Time-series cross-validation applied
+
+4. CORRELATION FINDINGS
+--------------------------------------------------------------------------------
+See detailed correlation matrix in: results/reports/macro_trade_correlations.csv
+
+5. NEXT MONTH PREDICTION
+--------------------------------------------------------------------------------
+Target Month: 2025-11
+Trade Will Occur: True
+Probability: 100.0%
+Predicted Trade Count: 5.7
+Predicted Trade Value: 4337.08 EUR
+
+================================================================================
+END OF REPORT
+================================================================================
