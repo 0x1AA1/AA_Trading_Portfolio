@@ -68,3 +68,5 @@ Showcasing some of my devs. works under progress and enhanceable of course.
       
 **Disclaimer :** All projects are personal research developed on personal time and equipment. Not affiliated with any current or former employer. Code is provided for educational and demonstration purposes. Not financial advice. 
 **Disclaimer 2 :** AI was used in coding several features and API connections - mainly using a claude code terminal in an isolated VM, and codex for my main PC / reformating / re-adjusting given the verbose content of claude.
+
+*LICENSE : MIT*
