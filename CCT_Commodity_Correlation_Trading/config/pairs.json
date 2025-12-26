@@ -1,0 +1,129 @@
+{
+  "commodity_equity_pairs": [
+    {
+      "pair_id": 1,
+      "commodity_ticker": "GLD",
+      "commodity_name": "Gold",
+      "equity_ticker": "NEM",
+      "equity_name": "Newmont Mining",
+      "expected_correlation": "positive",
+      "description": "Gold prices typically lead gold mining stocks",
+      "active": true
+    },
+    {
+      "pair_id": 2,
+      "commodity_ticker": "GLD",
+      "commodity_name": "Gold",
+      "equity_ticker": "GOLD",
+      "equity_name": "Barrick Gold",
+      "expected_correlation": "positive",
+      "description": "Gold producer with strong correlation to gold prices",
+      "active": true
+    },
+    {
+      "pair_id": 3,
+      "commodity_ticker": "USO",
+      "commodity_name": "Crude Oil",
+      "equity_ticker": "XOM",
+      "equity_name": "Exxon Mobil",
+      "expected_correlation": "positive",
+      "description": "Oil prices impact integrated oil majors",
+      "active": true
+    },
+    {
+      "pair_id": 4,
+      "commodity_ticker": "USO",
+      "commodity_name": "Crude Oil",
+      "equity_ticker": "CVX",
+      "equity_name": "Chevron",
+      "expected_correlation": "positive",
+      "description": "Oil major with strong correlation to crude prices",
+      "active": true
+    },
+    {
+      "pair_id": 5,
+      "commodity_ticker": "SLV",
+      "commodity_name": "Silver",
+      "equity_ticker": "FCX",
+      "equity_name": "Freeport-McMoRan",
+      "expected_correlation": "positive",
+      "description": "Copper and gold producer with silver exposure",
+      "active": true
+    },
+    {
+      "pair_id": 6,
+      "commodity_ticker": "COPX",
+      "commodity_name": "Copper",
+      "equity_ticker": "FCX",
+      "equity_name": "Freeport-McMoRan",
+      "expected_correlation": "positive",
+      "description": "Major copper producer",
+      "active": true
+    },
+    {
+      "pair_id": 7,
+      "commodity_ticker": "UNG",
+      "commodity_name": "Natural Gas",
+      "equity_ticker": "EQT",
+      "equity_name": "EQT Corporation",
+      "expected_correlation": "positive",
+      "description": "Natural gas producer",
+      "active": true
+    },
+    {
+      "pair_id": 8,
+      "commodity_ticker": "WEAT",
+      "commodity_name": "Wheat",
+      "equity_ticker": "ADM",
+      "equity_name": "Archer Daniels Midland",
+      "expected_correlation": "mixed",
+      "description": "Agricultural commodities processor",
+      "active": false
+    },
+    {
+      "pair_id": 9,
+      "commodity_ticker": "GLD",
+      "commodity_name": "Gold",
+      "equity_ticker": "AEM",
+      "equity_name": "Agnico Eagle Mines",
+      "expected_correlation": "positive",
+      "description": "Canadian gold producer",
+      "active": true
+    },
+    {
+      "pair_id": 10,
+      "commodity_ticker": "USO",
+      "commodity_name": "Crude Oil",
+      "equity_ticker": "COP",
+      "equity_name": "ConocoPhillips",
+      "expected_correlation": "positive",
+      "description": "Pure-play E&P company",
+      "active": true
+    }
+  ],
+  "backtest_parameters": {
+    "start_date": "2018-01-01",
+    "end_date": "2024-01-01",
+    "initial_capital": 100000,
+    "commission_pct": 0.001,
+    "slippage_pct": 0.0005,
+    "max_position_size": 0.2,
+    "rebalance_frequency": "weekly"
+  },
+  "model_parameters": {
+    "lookback_window": 60,
+    "max_lag": 20,
+    "profit_target": 0.03,
+    "stop_loss": 0.02,
+    "max_holding_period": 10,
+    "n_estimators": 100,
+    "max_depth": 5,
+    "cv_splits": 5
+  },
+  "signal_parameters": {
+    "z_score_entry_threshold": 2.0,
+    "z_score_exit_threshold": 0.5,
+    "correlation_threshold": 0.5,
+    "min_confidence": 0.6
+  }
+}
