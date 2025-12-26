@@ -23,9 +23,16 @@ Showcasing some of my devs. works under progress and enhanceable of course.
    - Predicts future trading behaviour
    - Personal portfolio optimization
 
-Other projects not shown : 
+Statistics, sources & refs : 
+   - Total Code Volume: ~35,000 lines Python
+   - Projects: 10+ quantitative systems (3 featured)
+   - Documentation: Comprehensive READMEs with methodology explanations
+   - Research Integration: Academic papers implemented (VolGAN, AFML) : VolGAN (2024-2025) - GAN-based volatility surface generation; López de Prado (2018) - Advances in Financial Machine Learning; Gatheral & Jacquier (2014) - Arbitrage-free SVI volatility surfaces; Carr & Madan (1998, 2005) - Variance trading and model-free volatility
+   - APIs Integrated: IBKR, Yahoo Finance, OECD, FRED
 
 
+
+Other relevant projects not shown : 
 
 4. **First_Prediction_Commodities** (Gold/Commodity ML)
    - Machine learning price prediction
@@ -54,6 +61,9 @@ Other projects not shown :
    - Interactive Brokers API integration
    - Live trading connectivity
    - Market data streaming
+  
+Disclaimer : All projects are personal research developed on personal time and equipment. Not affiliated with any current or former employer. Code is provided for educational and demonstration purposes. Not financial advice.
+Disclaimer 2 : AI was used in coding several features and API connections - mainly using a claude code terminal in an isolated VM, and codex for my main PC / reformating / re-adjusting given the verbose content of claude.
 
 
 10. **integrated_results**
