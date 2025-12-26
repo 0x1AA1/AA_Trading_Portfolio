@@ -1,13 +1,13 @@
 Showcasing some of my devs. works under progress and enhanceable of course.
 
 1.  **Vol_Surface** (Volatility Surface Analysis System)
-   - Production-grade volatility trading platform
-   - GAN-based arbitrage-free surface generation
-   - 6,000+ options analysis capability
-   - Research-backed (2024-2025 academic papers)
-   - Interactive 3D visualizations with Plotly
-   - IBKR and Yahoo Finance integration
-   - 2,178 lines of comprehensive documentation
+      - Production-grade volatility trading platform
+      - GAN-based arbitrage-free surface generation
+      - 6,000+ options analysis capability
+      - Research-backed (2024-2025 academic papers)
+      - Interactive 3D visualizations with Plotly
+      - IBKR and Yahoo Finance integration
+      - 2,178 lines of comprehensive documentation
      
 2. **CCT_Commodity_Correlation_Trading**
    - Systematic commodity correlation analysis
